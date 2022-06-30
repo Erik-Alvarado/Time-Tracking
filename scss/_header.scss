@@ -1,0 +1,39 @@
+header {
+  background-color: $darkBlue;
+  border-radius: 0.75rem;
+  .user-tag,
+  .options {
+    padding: 2rem;
+    border-radius: 0.75rem;
+    display: flex;
+  }
+  .user-tag {
+    background-color: $mainBlue;
+    align-items: center;
+    .user-info {
+      color: $base;
+      p {
+        font-size: 15px;
+        color: $paleBlue;
+      }
+    }
+    .user-img {
+      background-image: url("/images/image-jeremy.png");
+      background-position: center;
+      background-size: contain;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 5rem;
+      margin-right: 1rem;
+      border: 3px solid $base;
+    }
+  }
+  .options {
+    flex-direction: row;
+    justify-content: space-between;
+    color: $desatBlue;
+    .active {
+      color: $base;
+    }
+  }
+}

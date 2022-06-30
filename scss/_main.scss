@@ -1,0 +1,62 @@
+main {
+  .activity-card {
+    position: relative;
+    margin: 2rem 0;
+    border-radius: 0.75rem;
+    padding-top: 2.5rem;
+    &#work {
+      background-color: $workRed;
+      .icon {
+        background-image: url("/images/icon-work.svg");
+      }
+    }
+    &#play {
+      background-color: $playBlue;
+      .icon {
+        background-image: url("/images/icon-play.svg");
+      }
+    }
+    &#study {
+      background-color: $studyRed;
+      .icon {
+        background-image: url("/images/icon-study.svg");
+      }
+    }
+    &#exercise {
+      background-color: $exerciseGreen;
+      .icon {
+        background-image: url("/images/icon-exercise.svg");
+      }
+    }
+    &#social {
+      background-color: $socialViolet;
+      .icon {
+        background-image: url("/images/icon-social.svg");
+      }
+    }
+    &#care {
+      background-color: $careOrange;
+      .icon {
+        background-image: url("/images/icon-self-care.svg");
+      }
+    }
+    .icon {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 4rem;
+      width: 4rem;
+      position: absolute;
+      top: -5px;
+      right: 1rem;
+      z-index: 0;
+      clip: rect(5px, 70px, 70px, 0px);
+    }
+    .act-info {
+      z-index: 1;
+      position: relative;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      background-color: $darkBlue;
+    }
+  }
+}

@@ -11,11 +11,135 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 body {
   font-weight: 400;
   font-size: 18px;
+  background-color: #0f1424;
+  padding: 4rem 2rem;
+}
+
+header {
+  background-color: #1c1f4a;
+  border-radius: 0.75rem;
+}
+
+header .user-tag,
+header .options {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+}
+
+header .user-tag {
+  background-color: #5847eb;
+  align-items: center;
+}
+
+header .user-tag .user-info {
+  color: #fff;
+}
+
+header .user-tag .user-info p {
+  font-size: 15px;
+  color: #bdc1ff;
+}
+
+header .user-tag .user-img {
+  background-image: url("/images/image-jeremy.png");
+  background-position: center;
+  background-size: contain;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5rem;
+  margin-right: 1rem;
+  border: 3px solid #fff;
+}
+
+header .options {
+  flex-direction: row;
+  justify-content: space-between;
+  color: #6f76c8;
+}
+
+header .options .active {
+  color: #fff;
+}
+
+main .activity-card {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 0.75rem;
+  padding-top: 2.5rem;
+}
+
+main .activity-card#work {
+  background-color: #ff8c66;
+}
+
+main .activity-card#work .icon {
+  background-image: url("/images/icon-work.svg");
+}
+
+main .activity-card#play {
+  background-color: #56c2e6;
+}
+
+main .activity-card#play .icon {
+  background-image: url("/images/icon-play.svg");
+}
+
+main .activity-card#study {
+  background-color: #ff5c7c;
+}
+
+main .activity-card#study .icon {
+  background-image: url("/images/icon-study.svg");
+}
+
+main .activity-card#exercise {
+  background-color: #4acf81;
+}
+
+main .activity-card#exercise .icon {
+  background-image: url("/images/icon-exercise.svg");
+}
+
+main .activity-card#social {
+  background-color: #7536d3;
+}
+
+main .activity-card#social .icon {
+  background-image: url("/images/icon-social.svg");
+}
+
+main .activity-card#care {
+  background-color: #f1c65b;
+}
+
+main .activity-card#care .icon {
+  background-image: url("/images/icon-self-care.svg");
+}
+
+main .activity-card .icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: -5px;
+  right: 1rem;
+  z-index: 0;
+  clip: rect(5px, 70px, 70px, 0px);
+}
+
+main .activity-card .act-info {
+  z-index: 1;
+  position: relative;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  background-color: #1c1f4a;
 }
 /*# sourceMappingURL=styles.css.map */
