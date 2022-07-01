@@ -57,6 +57,32 @@ main {
       border-radius: 0.75rem;
       padding: 2rem;
       background-color: $darkBlue;
+      .act-upper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .info-select {
+          background-image: url("/images/icon-ellipsis.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 5px;
+          width: 21px;
+          z-index: 0;
+        }
+        .info-title {
+          color: $base;
+          font-weight: 500;
+        }
+      }
+      .act-lower {
+        display: flex;
+        align-items: center;
+        color: $base;
+        justify-content: space-between;
+        p {
+          color: $desatBlue;
+        }
+      }
     }
   }
 }

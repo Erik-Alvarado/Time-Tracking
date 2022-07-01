@@ -142,4 +142,52 @@ main .activity-card .act-info {
   padding: 2rem;
   background-color: #1c1f4a;
 }
+
+main .activity-card .act-info .act-upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .activity-card .act-info .act-upper .info-select {
+  background-image: url("/images/icon-ellipsis.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 5px;
+  width: 21px;
+  z-index: 0;
+}
+
+main .activity-card .act-info .act-upper .info-title {
+  color: #fff;
+  font-weight: 500;
+}
+
+main .activity-card .act-info .act-lower {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: space-between;
+}
+
+main .activity-card .act-info .act-lower p {
+  color: #6f76c8;
+}
+
+footer .attribution {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer .attribution a {
+  color: #5847eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: ease 0.3s;
+}
+
+footer .attribution a:hover {
+  color: #bdc1ff;
+}
 /*# sourceMappingURL=styles.css.map */
