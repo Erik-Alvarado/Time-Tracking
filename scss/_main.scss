@@ -1,7 +1,21 @@
 main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem 0;
+  margin: 2rem 0;
+  @include breakpoint-up(small) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+  }
+  @include breakpoint-up(large) {
+    margin: 0;
+  }
   .activity-card {
     position: relative;
-    margin: 2rem 0;
     border-radius: 0.75rem;
     padding-top: 2.5rem;
     &#work {
@@ -26,6 +40,10 @@ main {
       background-color: $exerciseGreen;
       .icon {
         background-image: url("/images/icon-exercise.svg");
+        background-size: contain;
+        top: 0;
+
+        clip: rect(0px, 70px, 70px, 0px);
       }
     }
     &#social {
@@ -54,9 +72,13 @@ main {
     .act-info {
       z-index: 1;
       position: relative;
-      border-radius: 0.75rem;
+      border-radius: 0.6rem;
       padding: 2rem;
       background-color: $darkBlue;
+      height: 100%;
+      @include breakpoint-up(small) {
+        padding: 1.5rem;
+      }
       .act-upper {
         display: flex;
         align-items: center;
@@ -75,12 +97,25 @@ main {
         }
       }
       .act-lower {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
         color: $base;
-        justify-content: space-between;
+        @include breakpoint-up(small) {
+          margin-top: 2rem;
+          grid-template-columns: repeat(1, 1fr);
+        }
         p {
           color: $desatBlue;
+          text-align: end;
+          @include breakpoint-up(small) {
+            text-align: start;
+            font-size: 16px;
+          }
+          @include breakpoint-up(medium) {
+            text-align: start;
+            font-size: 1rem;
+          }
         }
       }
     }

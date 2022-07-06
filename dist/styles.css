@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
   font-family: "Rubik", sans-serif;
 }
 
@@ -19,6 +18,19 @@ body {
   font-size: 18px;
   background-color: #0f1424;
   padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: auto;
+  max-width: 1024px;
+}
+
+@media (min-width: 64em) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 2rem;
+    height: 100vh;
+    align-content: center;
+  }
 }
 
 header {
@@ -33,13 +45,38 @@ header .options {
   display: flex;
 }
 
+@media (min-width: 56.25em) {
+  header .user-tag,
+  header .options {
+    flex-direction: column;
+  }
+}
+
 header .user-tag {
   background-color: #5847eb;
   align-items: center;
 }
 
+@media (min-width: 56.25em) {
+  header .user-tag {
+    align-items: flex-start;
+  }
+}
+
 header .user-tag .user-info {
   color: #fff;
+}
+
+@media (min-width: 56.25em) {
+  header .user-tag .user-info {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 64em) {
+  header .user-tag .user-info h1 {
+    inline-size: min-content;
+  }
 }
 
 header .user-tag .user-info p {
@@ -61,16 +98,59 @@ header .user-tag .user-img {
 header .options {
   flex-direction: row;
   justify-content: space-between;
-  color: #6f76c8;
 }
 
-header .options .active {
+@media (min-width: 56.25em) {
+  header .options {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 56.25em) {
+  header .options .option {
+    margin-bottom: 1rem;
+  }
+}
+
+header .options .option a {
+  transition: ease 0.3s;
+  color: #6f76c8;
+  text-decoration: none;
+}
+
+header .options .option.open a {
   color: #fff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem 0;
+  margin: 2rem 0;
+}
+
+@media (min-width: 39.9375em) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 56.25em) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 64em) {
+  main {
+    margin: 0;
+  }
 }
 
 main .activity-card {
   position: relative;
-  margin: 2rem 0;
   border-radius: 0.75rem;
   padding-top: 2.5rem;
 }
@@ -105,6 +185,9 @@ main .activity-card#exercise {
 
 main .activity-card#exercise .icon {
   background-image: url("/images/icon-exercise.svg");
+  background-size: contain;
+  top: 0;
+  clip: rect(0px, 70px, 70px, 0px);
 }
 
 main .activity-card#social {
@@ -138,9 +221,16 @@ main .activity-card .icon {
 main .activity-card .act-info {
   z-index: 1;
   position: relative;
-  border-radius: 0.75rem;
+  border-radius: 0.6rem;
   padding: 2rem;
   background-color: #1c1f4a;
+  height: 100%;
+}
+
+@media (min-width: 39.9375em) {
+  main .activity-card .act-info {
+    padding: 1.5rem;
+  }
 }
 
 main .activity-card .act-info .act-upper {
@@ -164,14 +254,54 @@ main .activity-card .act-info .act-upper .info-title {
 }
 
 main .activity-card .act-info .act-lower {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   color: #fff;
-  justify-content: space-between;
+}
+
+@media (min-width: 39.9375em) {
+  main .activity-card .act-info .act-lower {
+    margin-top: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 main .activity-card .act-info .act-lower p {
   color: #6f76c8;
+  text-align: end;
+}
+
+@media (min-width: 39.9375em) {
+  main .activity-card .act-info .act-lower p {
+    text-align: start;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 56.25em) {
+  main .activity-card .act-info .act-lower p {
+    text-align: start;
+    font-size: 1rem;
+  }
+}
+
+footer {
+  display: grid;
+}
+
+@media (min-width: 56.25em) {
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column: span 2;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 64em) {
+  footer {
+    grid-column: span 3;
+  }
 }
 
 footer .attribution {

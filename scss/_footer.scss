@@ -1,4 +1,13 @@
 footer {
+  display: grid;
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column: span 2;
+    margin-top: 1rem;
+  }
+  @include breakpoint-up(large) {
+    grid-column: span 3;
+  }
   .attribution {
     color: $base;
     font-size: 1rem;

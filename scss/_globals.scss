@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
   font-family: "Rubik", sans-serif;
 }
 h1,
@@ -18,4 +17,14 @@ body {
   font-size: 18px;
   background-color: $deepDarkBlue;
   padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: auto;
+  max-width: 1024px;
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 2rem;
+    height: 100vh;
+    align-content: center;
+  }
 }

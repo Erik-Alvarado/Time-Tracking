@@ -6,12 +6,26 @@ header {
     padding: 2rem;
     border-radius: 0.75rem;
     display: flex;
+    @include breakpoint-up(medium) {
+      flex-direction: column;
+    }
   }
   .user-tag {
     background-color: $mainBlue;
     align-items: center;
+    @include breakpoint-up(medium) {
+      align-items: flex-start;
+    }
     .user-info {
       color: $base;
+      @include breakpoint-up(medium) {
+        margin-top: 1rem;
+      }
+      h1 {
+        @include breakpoint-up(large) {
+          inline-size: min-content;
+        }
+      }
       p {
         font-size: 15px;
         color: $paleBlue;
@@ -31,9 +45,23 @@ header {
   .options {
     flex-direction: row;
     justify-content: space-between;
-    color: $desatBlue;
-    .active {
-      color: $base;
+    @include breakpoint-up(medium) {
+      flex-direction: column;
+    }
+    .option {
+      @include breakpoint-up(medium) {
+        margin-bottom: 1rem;
+      }
+      a {
+        transition: ease 0.3s;
+        color: $desatBlue;
+        text-decoration: none;
+      }
+      &.open {
+        a {
+          color: $base;
+        }
+      }
     }
   }
 }
